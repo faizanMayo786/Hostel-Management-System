@@ -54,6 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAL\Login\AdminModel.cs" />
+    <Compile Include="BAL\Login\VerifyAdmin.cs" />
     <Compile Include="PAL\AddUpdateRecord.cs">
       <SubType>Form</SubType>
     </Compile>

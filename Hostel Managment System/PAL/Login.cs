@@ -24,10 +24,22 @@ namespace Hostel_Managment_System.PAL
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+            BAL.AdminModel admin = new BAL.AdminModel(
+                txtEmail.Text,
+                txtPassword.Text
+                ) ;
+            if (BAL.Login.VerifyAdmin.Authentication(admin))
+            {
+                MessageBox.Show("Login Successful!");
+                Dashboard dashboard = new Dashboard();
+                this.Hide();
+                dashboard.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Email or Password!");
 
-            Dashboard dashboard = new Dashboard();
-            this.Hide();
-            dashboard.Show();
+            }
         }
     }
 }
