@@ -57,6 +57,8 @@
     <Compile Include="BAL\Admin\AdminModel.cs" />
     <Compile Include="BAL\Admin\VerifyAdmin.cs" />
     <Compile Include="BAL\Allotte\AllotteeModel.cs" />
+    <Compile Include="BAL\Bed\BedModel.cs" />
+    <Compile Include="BAL\Payment\PaymentModel.cs" />
     <Compile Include="BAL\Room\RoomModel.cs" />
     <Compile Include="PAL\AddUpdateRecord.cs">
       <SubType>Form</SubType>
