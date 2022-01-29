@@ -1,4 +1,4 @@
-﻿using Hostel_Managment_System.BAL.Allottee;
+﻿using Hostel_Managment_System.BAL.Allotte;
 using Hostel_Managment_System.BAL.Bed;
 using System;
 using System.Collections.Generic;
