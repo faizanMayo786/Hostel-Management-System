@@ -85,6 +85,7 @@ namespace Hostel_Managment_System.PAL.AddUpdateRecordForms
             this.Name = "SearchRecord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchRecord";
+            this.Load += new System.EventHandler(this.SearchRecord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

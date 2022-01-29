@@ -16,7 +16,9 @@ namespace Hostel_Managment_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PAL.Login());
+            PAL.Login login = new PAL.Login();
+            login.Show();
+            Application.Run();
         }
     }
 }

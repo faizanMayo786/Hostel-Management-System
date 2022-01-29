@@ -96,6 +96,7 @@ namespace Hostel_Managment_System.PAL
             this.Name = "Add_Record";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Record";
+            this.Load += new System.EventHandler(this.Add_Record_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

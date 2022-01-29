@@ -29,54 +29,55 @@ namespace Hostel_Managment_System.PAL
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pbxAdd = new System.Windows.Forms.PictureBox();
+            this.pbxDisplay = new System.Windows.Forms.PictureBox();
+            this.pbxSearch = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pbxDelete = new System.Windows.Forms.PictureBox();
+            this.pbxUpdate = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDisplay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUpdate)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox3
+            // pbxAdd
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox3.Image = global::Hostel_Managment_System.Properties.Resources.icons8_add_801;
-            this.pictureBox3.Location = new System.Drawing.Point(211, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pbxAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbxAdd.Image = global::Hostel_Managment_System.Properties.Resources.icons8_add_801;
+            this.pbxAdd.Location = new System.Drawing.Point(211, 12);
+            this.pbxAdd.Name = "pbxAdd";
+            this.pbxAdd.Size = new System.Drawing.Size(100, 100);
+            this.pbxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxAdd.TabIndex = 1;
+            this.pbxAdd.TabStop = false;
+            this.pbxAdd.Click += new System.EventHandler(this.pbxAdd_Click);
             // 
-            // pictureBox6
+            // pbxDisplay
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = global::Hostel_Managment_System.Properties.Resources.icons8_list_view_100;
-            this.pictureBox6.Location = new System.Drawing.Point(347, 399);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
+            this.pbxDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxDisplay.Image = global::Hostel_Managment_System.Properties.Resources.icons8_list_view_100;
+            this.pbxDisplay.Location = new System.Drawing.Point(347, 399);
+            this.pbxDisplay.Name = "pbxDisplay";
+            this.pbxDisplay.Size = new System.Drawing.Size(100, 100);
+            this.pbxDisplay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxDisplay.TabIndex = 1;
+            this.pbxDisplay.TabStop = false;
+            this.pbxDisplay.Click += new System.EventHandler(this.pbxDisplay_Click);
             // 
-            // pictureBox4
+            // pbxSearch
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox4.Image = global::Hostel_Managment_System.Properties.Resources.icons8_search_100;
-            this.pictureBox4.Location = new System.Drawing.Point(76, 399);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pbxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pbxSearch.Image = global::Hostel_Managment_System.Properties.Resources.icons8_search_100;
+            this.pbxSearch.Location = new System.Drawing.Point(76, 399);
+            this.pbxSearch.Name = "pbxSearch";
+            this.pbxSearch.Size = new System.Drawing.Size(100, 100);
+            this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxSearch.TabIndex = 1;
+            this.pbxSearch.TabStop = false;
+            this.pbxSearch.Click += new System.EventHandler(this.pbxSearch_Click);
             // 
             // pictureBox5
             // 
@@ -91,60 +92,63 @@ namespace Hostel_Managment_System.PAL
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox2
+            // pbxDelete
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox2.Image = global::Hostel_Managment_System.Properties.Resources.delete_record;
-            this.pictureBox2.Location = new System.Drawing.Point(422, 168);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.pbxDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pbxDelete.Image = global::Hostel_Managment_System.Properties.Resources.delete_record;
+            this.pbxDelete.Location = new System.Drawing.Point(422, 168);
+            this.pbxDelete.Name = "pbxDelete";
+            this.pbxDelete.Size = new System.Drawing.Size(100, 100);
+            this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxDelete.TabIndex = 1;
+            this.pbxDelete.TabStop = false;
+            this.pbxDelete.Click += new System.EventHandler(this.pbxDelete_Click);
             // 
-            // pictureBox1
+            // pbxUpdate
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox1.Image = global::Hostel_Managment_System.Properties.Resources.update_record;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 168);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pbxUpdate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pbxUpdate.Image = global::Hostel_Managment_System.Properties.Resources.update_record;
+            this.pbxUpdate.Location = new System.Drawing.Point(12, 168);
+            this.pbxUpdate.Name = "pbxUpdate";
+            this.pbxUpdate.Size = new System.Drawing.Size(100, 100);
+            this.pbxUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxUpdate.TabIndex = 1;
+            this.pbxUpdate.TabStop = false;
+            this.pbxUpdate.Click += new System.EventHandler(this.pbxUpdate_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 511);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pbxAdd);
+            this.Controls.Add(this.pbxDisplay);
+            this.Controls.Add(this.pbxSearch);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbxDelete);
+            this.Controls.Add(this.pbxUpdate);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Dashboard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDisplay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUpdate)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pbxUpdate;
+        private System.Windows.Forms.PictureBox pbxDelete;
+        private System.Windows.Forms.PictureBox pbxAdd;
+        private System.Windows.Forms.PictureBox pbxSearch;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pbxDisplay;
     }
 }

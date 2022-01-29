@@ -54,8 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BAL\Login\AdminModel.cs" />
-    <Compile Include="BAL\Login\VerifyAdmin.cs" />
+    <Compile Include="BAL\Admin\AdminModel.cs" />
+    <Compile Include="BAL\Admin\VerifyAdmin.cs" />
+    <Compile Include="BAL\Allottee\AllotteeModel.cs" />
+    <Compile Include="BAL\Bed\BedModel.cs" />
+    <Compile Include="BAL\Payment\PaymentModel.cs" />
+    <Compile Include="BAL\Room\RoomModel.cs" />
     <Compile Include="PAL\AddUpdateRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,8 +208,6 @@
   <ItemGroup>
     <None Include="Resources\icons8-list-view-100.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\playstore.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
-﻿using Microsoft.Build.Tasks;
+﻿using Hostel_Managment_System.PAL.AddUpdateRecordForms;
+using Microsoft.Build.Tasks;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,21 +19,49 @@ namespace Hostel_Managment_System.PAL
             InitializeComponent();
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
+       
+
+        private void pbxAdd_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
             Add_Record add = new Add_Record();
             this.Hide();
             add.Show();
-
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void pbxUpdate_Click(object sender, EventArgs e)
+        {
+            Add_Record add = new Add_Record();
+            this.Hide();
+            add.Show();
+        }
+
+        private void pbxDelete_Click(object sender, EventArgs e)
+        {
+            DeleteRecord add = new DeleteRecord();
+            this.Hide();
+            add.Show();
+        }
+
+        private void pbxSearch_Click(object sender, EventArgs e)
+        {
+            SearchRecord add = new SearchRecord();
+            this.Hide();
+            add.Show();
+        }
+
+        private void pbxDisplay_Click(object sender, EventArgs e)
+        {
+             DisplayRecord add = new DisplayRecord();
+            this.Hide();
+            add.Show();
+        }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
         {
 
         }

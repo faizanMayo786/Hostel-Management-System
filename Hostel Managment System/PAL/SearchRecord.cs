@@ -16,5 +16,10 @@ namespace Hostel_Managment_System.PAL.AddUpdateRecordForms
         {
             InitializeComponent();
         }
+
+        private void SearchRecord_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

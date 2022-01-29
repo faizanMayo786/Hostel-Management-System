@@ -9,19 +9,9 @@ namespace Hostel_Managment_System.BAL
     class AdminModel
     {
 
-        private string email;
-        private string password;
 
-        public string Email { 
-            get { return email; } 
-            set { email = value; }
-        }
-        public string Password
-        {
-            get { return password; }
-            set { password= value; }
-
-        }
+        public string Email { get; set; }
+        public string Password { get; set; }
         public AdminModel(string email,string password)
         {
             Email = email;

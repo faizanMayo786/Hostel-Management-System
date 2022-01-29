@@ -21,5 +21,10 @@ namespace Hostel_Managment_System.PAL
         {
            
         }
+
+        private void Add_Record_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
