@@ -46,6 +46,7 @@ namespace Hostel_Managment_System.PAL
             // pbxAdd
             // 
             this.pbxAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbxAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxAdd.Image = global::Hostel_Managment_System.Properties.Resources.icons8_add_801;
             this.pbxAdd.Location = new System.Drawing.Point(211, 12);
             this.pbxAdd.Name = "pbxAdd";
@@ -58,6 +59,7 @@ namespace Hostel_Managment_System.PAL
             // pbxDisplay
             // 
             this.pbxDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxDisplay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxDisplay.Image = global::Hostel_Managment_System.Properties.Resources.icons8_list_view_100;
             this.pbxDisplay.Location = new System.Drawing.Point(347, 399);
             this.pbxDisplay.Name = "pbxDisplay";
@@ -70,6 +72,7 @@ namespace Hostel_Managment_System.PAL
             // pbxSearch
             // 
             this.pbxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pbxSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSearch.Image = global::Hostel_Managment_System.Properties.Resources.icons8_search_100;
             this.pbxSearch.Location = new System.Drawing.Point(76, 399);
             this.pbxSearch.Name = "pbxSearch";
@@ -84,6 +87,7 @@ namespace Hostel_Managment_System.PAL
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::Hostel_Managment_System.Properties.Resources.MyHostel_NewLogo;
             this.pictureBox5.Location = new System.Drawing.Point(166, 168);
             this.pictureBox5.Name = "pictureBox5";
@@ -95,6 +99,7 @@ namespace Hostel_Managment_System.PAL
             // pbxDelete
             // 
             this.pbxDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxDelete.Image = global::Hostel_Managment_System.Properties.Resources.delete_record;
             this.pbxDelete.Location = new System.Drawing.Point(422, 168);
             this.pbxDelete.Name = "pbxDelete";
@@ -107,6 +112,7 @@ namespace Hostel_Managment_System.PAL
             // pbxUpdate
             // 
             this.pbxUpdate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pbxUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxUpdate.Image = global::Hostel_Managment_System.Properties.Resources.update_record;
             this.pbxUpdate.Location = new System.Drawing.Point(12, 168);
             this.pbxUpdate.Name = "pbxUpdate";

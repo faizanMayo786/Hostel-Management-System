@@ -62,6 +62,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.btnSubmit.TabIndex = 37;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // txtID
             // 
@@ -115,6 +116,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.Name = "Bed";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bed";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Bed_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

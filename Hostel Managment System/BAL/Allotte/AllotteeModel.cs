@@ -15,7 +15,7 @@ namespace Hostel_Managment_System.BAL.Allotte
         public string PhoneNumber { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
-        protected PaymentModel payment;
+        public PaymentModel Payment { get; set; }
         public AllotteeModel(string allotteeID, string cnic, string dob, string phoneNumber, string name, string address)
         {
             AllotteeID = allotteeID;
@@ -24,6 +24,10 @@ namespace Hostel_Managment_System.BAL.Allotte
             DOB = dob;
             PhoneNumber = phoneNumber;
             Address = address;
+        }
+        public void AddPayment(PaymentModel payment)
+        {
+            Payment = payment;
         }
     }
 }

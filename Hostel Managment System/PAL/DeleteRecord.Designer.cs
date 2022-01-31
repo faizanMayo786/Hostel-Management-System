@@ -29,31 +29,32 @@ namespace Hostel_Managment_System.PAL
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbID = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmbType
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbType.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Items.AddRange(new object[] {
             "Allottee",
             "Payment",
             "Room",
             "Bed"});
-            this.comboBox1.Location = new System.Drawing.Point(181, 124);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(157, 29);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = "Choose type...";
+            this.cmbType.Location = new System.Drawing.Point(181, 124);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(157, 29);
+            this.cmbType.TabIndex = 6;
+            this.cmbType.Text = "Choose type...";
+            this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -85,18 +86,18 @@ namespace Hostel_Managment_System.PAL
             this.label3.TabIndex = 3;
             this.label3.Text = "Record ID:";
             // 
-            // comboBox2
+            // cmbID
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(181, 176);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(157, 29);
-            this.comboBox2.TabIndex = 6;
-            this.comboBox2.Text = "Choose ID...";
+            this.cmbID.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbID.FormattingEnabled = true;
+            this.cmbID.Location = new System.Drawing.Point(181, 176);
+            this.cmbID.Name = "cmbID";
+            this.cmbID.Size = new System.Drawing.Size(157, 29);
+            this.cmbID.TabIndex = 6;
+            this.cmbID.Text = "Choose ID...";
             // 
             // button1
             // 
@@ -107,14 +108,15 @@ namespace Hostel_Managment_System.PAL
             this.button1.TabIndex = 5;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DeleteRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 328);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbID);
+            this.Controls.Add(this.cmbType);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -122,6 +124,8 @@ namespace Hostel_Managment_System.PAL
             this.Name = "DeleteRecord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteRecord";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DeleteRecord_FormClosing);
+            this.Load += new System.EventHandler(this.DeleteRecord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,11 +133,11 @@ namespace Hostel_Managment_System.PAL
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbID;
         private System.Windows.Forms.Button button1;
     }
 }

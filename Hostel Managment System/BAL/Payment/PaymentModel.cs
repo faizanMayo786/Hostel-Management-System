@@ -11,17 +11,11 @@ namespace Hostel_Managment_System.BAL.Payment
         public string ID { get; set; }
         public string Date { get; set; }
 
-
-
         public PaymentModel(string id, string date)
         {
             ID = id;
             Date = date;
         }
-
-
-
-
 
     }
 }

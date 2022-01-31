@@ -50,6 +50,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.btnSubmit.TabIndex = 21;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // txtNoOfAllottee
             // 
@@ -151,6 +152,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.Name = "Room";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Room";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Room_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

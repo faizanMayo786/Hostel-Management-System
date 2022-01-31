@@ -1,4 +1,8 @@
-﻿using Hostel_Managment_System.PAL.AddUpdateRecordForms;
+﻿using Hostel_Managment_System.BAL.Allotte;
+using Hostel_Managment_System.BAL.Bed;
+using Hostel_Managment_System.BAL.Payment;
+using Hostel_Managment_System.BAL.Room;
+using Hostel_Managment_System.PAL.AddUpdateRecordForms;
 using Microsoft.Build.Tasks;
 using System;
 using System.Collections.Generic;
@@ -14,6 +18,7 @@ namespace Hostel_Managment_System.PAL
 {
     public partial class Dashboard : Form
     {
+        
         public Dashboard()
         {
             InitializeComponent();
@@ -51,7 +56,7 @@ namespace Hostel_Managment_System.PAL
 
         private void pbxDisplay_Click(object sender, EventArgs e)
         {
-             DisplayRecord add = new DisplayRecord();
+            DisplayRecord add = new DisplayRecord();
             this.Hide();
             add.Show();
         }

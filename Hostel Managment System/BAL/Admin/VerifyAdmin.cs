@@ -11,8 +11,8 @@ namespace Hostel_Managment_System.BAL.Login
         static public bool Authentication(AdminModel admin)
         {
             if(
-                 admin.Username.Equals("Faizan") &&
-                 admin.Password.Equals("786")
+                 admin.Username.Equals("test") &&
+                 admin.Password.Equals("123")
               )
             {
                 return true;

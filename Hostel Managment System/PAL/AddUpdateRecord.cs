@@ -1,12 +1,5 @@
 ﻿using Hostel_Managment_System.PAL.AddRecordForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hostel_Managment_System.PAL
@@ -16,7 +9,7 @@ namespace Hostel_Managment_System.PAL
         private string heading;
         public Add_Record(string heading)
         {
-            
+
             InitializeComponent();
             this.heading = heading;
             lblText.Text = heading + " Record";
@@ -30,20 +23,25 @@ namespace Hostel_Managment_System.PAL
                 switch (cmbRecordType.SelectedIndex)
                 {
                     case 0:
+
                         Allottee allottee = new Allottee(heading + " Allottee Record");
+                        this.Close();
                         allottee.Show();
                         break;
                     case 1:
-                        Payment payment = new Payment(heading+" Payment Record");
+                        Payment payment = new Payment(heading + " Payment Record");
+                        this.Close();
                         payment.Show();
-                        
+
                         break;
                     case 2:
-                        Room room = new Room(heading+ " Room Record");
+                        Room room = new Room(heading + " Room Record");
+                        this.Close();
                         room.Show();
                         break;
                     case 3:
                         Bed bed = new Bed(heading + " Bed Record");
+                        this.Close();
                         bed.Show();
                         break;
                     default:
@@ -53,7 +51,6 @@ namespace Hostel_Managment_System.PAL
             else
             {
                 MessageBox.Show("Choose Record Type!");
-
             }
         }
 
@@ -63,9 +60,10 @@ namespace Hostel_Managment_System.PAL
 
         private void Add_Record_FormClosing(object sender, FormClosingEventArgs e)
         {
-                this.Hide();
+            this.Hide();
             if (button1.Tag.ToString() == "Submit")
             {
+                return;
             }
             else
             {
