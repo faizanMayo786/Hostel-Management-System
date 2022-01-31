@@ -23,14 +23,14 @@ namespace Hostel_Managment_System.PAL
 
         private void pbxAdd_Click(object sender, EventArgs e)
         {
-            Add_Record add = new Add_Record();
+            Add_Record add = new Add_Record("Add");
             this.Hide();
             add.Show();
         }
 
         private void pbxUpdate_Click(object sender, EventArgs e)
         {
-            Add_Record add = new Add_Record();
+            Add_Record add = new Add_Record("Update");
             this.Hide();
             add.Show();
         }

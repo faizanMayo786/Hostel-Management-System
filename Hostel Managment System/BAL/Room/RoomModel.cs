@@ -23,5 +23,7 @@ namespace Hostel_Managment_System.BAL.Room
             ID = id;
             RoomFloor = roomFloor;
         }
+
+
     }
 }

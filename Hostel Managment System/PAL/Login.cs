@@ -39,7 +39,7 @@ namespace Hostel_Managment_System.PAL
             }
             else
             {
-                MessageBox.Show("Invalid Email or Password!");
+                MessageBox.Show("Invalid Username or Password!");
             }
         }
 

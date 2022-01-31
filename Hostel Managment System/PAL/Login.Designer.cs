@@ -67,6 +67,7 @@ namespace Hostel_Managment_System.PAL
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(139, 42);
             this.btnLogin.TabIndex = 2;
+            this.btnLogin.Tag = "NotLogin";
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
@@ -98,9 +99,9 @@ namespace Hostel_Managment_System.PAL
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(39, 198);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 23);
+            this.label2.Size = new System.Drawing.Size(99, 23);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Email:";
+            this.label2.Text = "Username:";
             // 
             // label3
             // 

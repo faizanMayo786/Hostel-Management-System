@@ -12,8 +12,9 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
 {
     public partial class Allottee : Form
     {
-        public Allottee()
+        public Allottee(string heading)
         {
+            lblText.Text = heading;
             InitializeComponent();
         }
     }

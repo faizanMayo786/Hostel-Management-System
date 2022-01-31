@@ -12,9 +12,11 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
 {
     public partial class Bed : Form
     {
-        public Bed()
+        public Bed(string heading)
         {
+
             InitializeComponent();
+            lblText.Text = heading;
         }
     }
 }
