@@ -23,26 +23,59 @@ namespace Hostel_Managment_System.PAL
                 switch (cmbRecordType.SelectedIndex)
                 {
                     case 0:
-
-                        Allottee allottee = new Allottee(heading + " Allottee Record");
+                        if (heading == "Add")
+                        {
+                            Allottee allottee = new Allottee(heading + " Allottee Record", null, 0);
+                            allottee.Show();
+                        }
+                        else
+                        {
+                            UpdateKeyForm update = new UpdateKeyForm(heading, cmbRecordType.SelectedIndex);
+                            update.Show();
+                        }
                         this.Close();
-                        allottee.Show();
                         break;
                     case 1:
-                        Payment payment = new Payment(heading + " Payment Record");
-                        this.Close();
-                        payment.Show();
+                        if (heading == "Add")
+                        {
+                            Payment payment = new Payment(heading + " Payment Record", null, 0);
+                            payment.Show();
+                        }
 
+                        else
+                        {
+                            UpdateKeyForm update = new UpdateKeyForm(heading, cmbRecordType.SelectedIndex);
+                            update.Show();
+                        }
+                        this.Close();
                         break;
                     case 2:
-                        Room room = new Room(heading + " Room Record");
+                        if (heading == "Add")
+                        {
+                            Room room = new Room(heading + " Room Record", null, 0);
+                            room.Show();
+                        }
+
+                        else
+                        {
+                            UpdateKeyForm update = new UpdateKeyForm(heading, cmbRecordType.SelectedIndex);
+                            update.Show();
+                        }
                         this.Close();
-                        room.Show();
                         break;
                     case 3:
-                        Bed bed = new Bed(heading + " Bed Record");
+                        if (heading == "Add")
+                        {
+                            Bed bed = new Bed(heading + " Bed Record", null, 0);
+                            bed.Show();
+                        }
+
+                        else
+                        {
+                            UpdateKeyForm update = new UpdateKeyForm(heading, cmbRecordType.SelectedIndex);
+                            update.Show();
+                        }
                         this.Close();
-                        bed.Show();
                         break;
                     default:
                         break;

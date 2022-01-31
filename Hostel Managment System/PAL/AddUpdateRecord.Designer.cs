@@ -73,7 +73,7 @@ namespace Hostel_Managment_System.PAL
             this.cmbRecordType.Location = new System.Drawing.Point(182, 78);
             this.cmbRecordType.Name = "cmbRecordType";
             this.cmbRecordType.Size = new System.Drawing.Size(146, 29);
-            this.cmbRecordType.TabIndex = 2;
+            this.cmbRecordType.TabIndex = 0;
             this.cmbRecordType.Text = "Choose type...";
             // 
             // label2

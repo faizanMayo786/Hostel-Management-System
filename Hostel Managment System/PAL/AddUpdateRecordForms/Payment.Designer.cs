@@ -45,7 +45,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.button1.Location = new System.Drawing.Point(223, 296);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 37);
-            this.button1.TabIndex = 31;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -56,7 +56,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.txtID.Location = new System.Drawing.Point(242, 175);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(268, 29);
-            this.txtID.TabIndex = 30;
+            this.txtID.TabIndex = 1;
             // 
             // label6
             // 
@@ -94,7 +94,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.dtpDate.Location = new System.Drawing.Point(242, 233);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(268, 29);
-            this.dtpDate.TabIndex = 33;
+            this.dtpDate.TabIndex = 2;
             // 
             // cmbAllotteID
             // 
@@ -103,7 +103,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.cmbAllotteID.Location = new System.Drawing.Point(242, 117);
             this.cmbAllotteID.Name = "cmbAllotteID";
             this.cmbAllotteID.Size = new System.Drawing.Size(268, 29);
-            this.cmbAllotteID.TabIndex = 34;
+            this.cmbAllotteID.TabIndex = 0;
             this.cmbAllotteID.Text = "Choose Allotte ID...";
             this.cmbAllotteID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 

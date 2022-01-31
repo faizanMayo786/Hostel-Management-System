@@ -14,32 +14,58 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
     public partial class Allottee : Form
     {
         private string heading;
-        public Allottee(string heading)
+        private AllotteeModel allottee1;
+        private int index;
+        public Allottee(string heading, AllotteeModel allottee, int index)
         {
             InitializeComponent();
+            allottee1 = allottee;
             lblText.Text = heading;
             this.heading = heading;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (txtID.Text.Trim() != "")
+            if (cmbRoomID.SelectedIndex != -1)
             {
-                AllotteeModel allotte = new AllotteeModel(
-                    txtID.Text,
-                    txtCNIC.Text,
-                    txtDOB.Text,
-                    txtPhoneNo.Text,
-                    txtName.Text,
-                    txtAddress.Text
-                );
-                DataSource.Data.allotte.Add(allotte);
-                MessageBox.Show("Record Added Successfully!");
-                this.Close();
+                if (txtID.Text.Trim() != "")
+                {
+                    AllotteeModel allotte = new AllotteeModel(
+                        txtID.Text,
+                        txtCNIC.Text,
+                        txtDOB.Text,
+                        txtPhoneNo.Text,
+                        txtName.Text,
+                        txtAddress.Text
+                    );
+                    if (heading.Contains("Add"))
+                    {
+                        DataSource.Data.allotte.Add(allotte);
+                        DataSource.Data
+                            .room[cmbRoomID.SelectedIndex]
+                            .AllottRoom(allotte);
+                        MessageBox.Show("Record " + heading + " Successfully!");
+                    }
+                    else
+                    {
+                        DataSource.Data.allotte[index] = allotte;
+                        DataSource.Data
+                            .room[cmbRoomID.SelectedIndex]
+                            .UpdateAllott(allotte);
+                        MessageBox.Show("Record " + heading + " Successfully!");
+
+                    }
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Record Not " + heading + "ed");
+                }
             }
             else
             {
-                MessageBox.Show("Record Not " + heading + "ed");
+                MessageBox.Show("Choose Room ID!");
+
             }
         }
 
@@ -48,6 +74,47 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             Dashboard dashboard = new Dashboard();
             this.Hide();
             dashboard.Show();
+        }
+
+        private void Allottee_Load(object sender, EventArgs e)
+        {
+            if (heading.Contains("Add"))
+            {
+                txtID.Enabled = false;
+                txtCNIC.Enabled = false;
+                txtDOB.Enabled = false;
+                txtPhoneNo.Enabled = false;
+                txtName.Enabled = false;
+                txtAddress.Enabled = false;
+            }
+            else
+            {
+                txtID.Text = allottee1.ID;
+                txtID.Enabled = false;
+                txtCNIC.Text = allottee1.CNIC;
+                txtDOB.Text = allottee1.DOB;
+                txtPhoneNo.Text = allottee1.PhoneNumber;
+                txtName.Text = allottee1.Name;
+                txtAddress.Text = allottee1.Address;
+            }
+            List<string> room = new List<string>();
+            foreach (var item in DataSource.Data.room)
+            {
+                room.Add(item.ID);
+            }
+            cmbRoomID.DataSource = room;
+        }
+
+        private void cmbRoomID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (heading.Contains("Add"))
+                txtID.Enabled = true;
+            txtCNIC.Enabled = true;
+            txtDOB.Enabled = true;
+            txtPhoneNo.Enabled = true;
+            txtName.Enabled = true;
+            txtAddress.Enabled = true;
+
         }
     }
 }

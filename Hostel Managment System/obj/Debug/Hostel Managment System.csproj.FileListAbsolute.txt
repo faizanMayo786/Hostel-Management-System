@@ -26,3 +26,5 @@ C:\Users\Mayo\Desktop\Desktop\OOP\Final Projects\Hostel Managment System\Hostel 
 C:\Users\Mayo\Desktop\Desktop\OOP\Final Projects\Hostel Managment System\Hostel Managment System\obj\Debug\Hostel_Managment_System.PAL.AddUpdateRecordForms.SearchRecord.resources
 C:\Users\Mayo\Desktop\Desktop\OOP\Final Projects\Hostel Managment System\Hostel Managment System\obj\Debug\Hostel_Managment_System.PAL.DeleteRecord.resources
 C:\Users\Mayo\Desktop\Desktop\OOP\Final Projects\Hostel Managment System\Hostel Managment System\obj\Debug\Hostel_Managment_System.PAL.DisplayRecord.resources
+C:\Users\Mayo\Desktop\Desktop\OOP\Final Projects\Hostel Managment System\Hostel Managment System\obj\Debug\Hostel_Managment_System.PAL.Display.resources
+C:\Users\Mayo\Desktop\Desktop\OOP\Final Projects\Hostel Managment System\Hostel Managment System\obj\Debug\Hostel_Managment_System.PAL.UpdateKeyForm.resources

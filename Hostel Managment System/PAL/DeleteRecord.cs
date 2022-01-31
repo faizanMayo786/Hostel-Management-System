@@ -32,7 +32,7 @@ namespace Hostel_Managment_System.PAL
                         List<string> allottee = new List<string>();
                         foreach (var item in DataSource.Data.allotte)
                         {
-                            allottee.Add(item.AllotteeID);
+                            allottee.Add(item.ID);
                         }
                         cmbID.Enabled = true;
                         cmbID.DataSource = allottee;
@@ -107,7 +107,6 @@ namespace Hostel_Managment_System.PAL
                     else
                     {
                         MessageBox.Show("No Record to Delete!");
-
                     }
                 }
                 else

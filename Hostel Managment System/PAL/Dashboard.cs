@@ -18,13 +18,13 @@ namespace Hostel_Managment_System.PAL
 {
     public partial class Dashboard : Form
     {
-        
+
         public Dashboard()
         {
             InitializeComponent();
         }
 
-       
+
 
         private void pbxAdd_Click(object sender, EventArgs e)
         {

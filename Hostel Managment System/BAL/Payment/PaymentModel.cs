@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hostel_Managment_System.BAL.Payment
 {
-    class PaymentModel
+    public class PaymentModel
     {
         public string ID { get; set; }
         public string Date { get; set; }
@@ -15,6 +15,10 @@ namespace Hostel_Managment_System.BAL.Payment
         {
             ID = id;
             Date = date;
+        }
+        public override string ToString()
+        {
+            return ID.ToString();
         }
 
     }

@@ -91,6 +91,12 @@
     <Compile Include="PAL\AddUpdateRecordForms\Room.Designer.cs">
       <DependentUpon>Room.cs</DependentUpon>
     </Compile>
+    <Compile Include="PAL\DisplayRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\DisplayRecord.Designer.cs">
+      <DependentUpon>DisplayRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="PAL\SearchRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,17 +115,23 @@
     <Compile Include="PAL\DeleteRecord.Designer.cs">
       <DependentUpon>DeleteRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="PAL\DisplayRecord.cs">
+    <Compile Include="PAL\Display.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PAL\DisplayRecord.Designer.cs">
-      <DependentUpon>DisplayRecord.cs</DependentUpon>
+    <Compile Include="PAL\Display.Designer.cs">
+      <DependentUpon>Display.cs</DependentUpon>
     </Compile>
     <Compile Include="PAL\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PAL\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\UpdateKeyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\UpdateKeyForm.Designer.cs">
+      <DependentUpon>UpdateKeyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,6 +150,9 @@
     <EmbeddedResource Include="PAL\AddUpdateRecordForms\Room.resx">
       <DependentUpon>Room.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PAL\DisplayRecord.resx">
+      <DependentUpon>DisplayRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PAL\SearchRecord.resx">
       <DependentUpon>SearchRecord.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,11 +162,14 @@
     <EmbeddedResource Include="PAL\DeleteRecord.resx">
       <DependentUpon>DeleteRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PAL\DisplayRecord.resx">
-      <DependentUpon>DisplayRecord.cs</DependentUpon>
+    <EmbeddedResource Include="PAL\Display.resx">
+      <DependentUpon>Display.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PAL\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\UpdateKeyForm.resx">
+      <DependentUpon>UpdateKeyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

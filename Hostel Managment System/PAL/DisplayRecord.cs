@@ -17,14 +17,33 @@ namespace Hostel_Managment_System.PAL
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            if (cmbRecordType.SelectedIndex != -1)
+            {
+                button1.Tag = "Display";
+                Display display = new Display(cmbRecordType.SelectedIndex);
+                this.Close();
+                display.Show();
+            }
+            else
+            {
+                MessageBox.Show("Choose Record Type!");
+            }
         }
 
-        private void DisplayRecord_Load(object sender, EventArgs e)
+        private void DisplayRecord_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            this.Hide();
+            if (button1.Tag.ToString() == "Display")
+            {
+                return;
+            }
+            else
+            {
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
+            }
         }
     }
 }

@@ -14,10 +14,13 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
     public partial class Payment : Form
     {
         private string heading;
-        public Payment(string heading)
+        private PaymentModel payment1;
+        private int index;
+        public Payment(string heading, PaymentModel payment, int index)
         {
-
+            this.index = index;
             InitializeComponent();
+            this.payment1 = payment;
             this.heading = heading;
             lblText.Text = heading;
         }
@@ -25,13 +28,21 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
         private void Payment_Load(object sender, EventArgs e)
         {
             txtID.Enabled = false;
-            dtpDate.Enabled = false;
+            if (heading.Contains("Add"))
+            {
+                dtpDate.Enabled = false;
+            }
+            else
+            {
+                txtID.Text = payment1.ID;
+                dtpDate.Text = payment1.Date;
+            }
             foreach (var item in DataSource.Data.allotte)
             {
-                allottee.Add(item.AllotteeID);
+                allottee.Add(item.ID);
             }
             cmbAllotteID.DataSource = allottee;
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,9 +53,19 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                     txtID.Text,
                     dtpDate.Text.ToString()
                 );
-                MessageBox.Show(cmbAllotteID.SelectedItem.ToString());
-                DataSource.Data.allotte[cmbAllotteID.SelectedIndex].AddPayment(payment);
-                MessageBox.Show("Record Added Successfully!");
+                if (heading.Contains("Add"))
+                {
+                    DataSource.Data.payment.Add(payment);
+                    DataSource.Data.allotte[cmbAllotteID.SelectedIndex].AddPayment(payment);
+                    MessageBox.Show("Record Added Successfully!");
+                }
+                else
+                {
+                    DataSource.Data.payment[index] = payment;
+                    DataSource.Data.allotte[cmbAllotteID.SelectedIndex].AddPayment(payment); MessageBox.Show("Record Added Successfully!");
+                    MessageBox.Show("Record Updated Successfully!");
+
+                }
                 this.Close();
             }
             else
@@ -64,11 +85,11 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
         {
             if (cmbAllotteID.SelectedIndex != -1)
             {
-
-                txtID.Enabled = true;
+                if (heading.Contains("Add"))
+                    txtID.Enabled = true;
                 dtpDate.Enabled = true;
             }
-            
+
         }
     }
 }

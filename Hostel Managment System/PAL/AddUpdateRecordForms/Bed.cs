@@ -14,9 +14,14 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
     public partial class Bed : Form
     {
         private string heading;
-        public Bed(string heading)
-        {
+        private BedModel bed1;
+        private int index;
+        public Bed(string heading, BedModel bed, int index)
 
+
+        {
+            this.index = index;
+            this.bed1 = bed;
             InitializeComponent();
             this.heading = heading;
             lblText.Text = heading;
@@ -24,22 +29,37 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (txtID.Text.Trim() != "")
+            if (cmbRoomID.SelectedIndex != -1)
             {
-                BedModel bed = new BedModel(
-                    txtID.Text,
-                    cmbStatus.Text.ToString()
-                );
-                DataSource.Data.bed.Add(bed);
+                if (txtID.Text.Trim() != "")
+                {
+                    BedModel bed = new BedModel(
+                        txtID.Text,
+                        cmbStatus.Text.ToString()
+                    );
+                    if (heading.Contains("Add"))
+                    {
+                        DataSource.Data.bed.Add(bed);
+                        DataSource.Data.room[cmbRoomID.SelectedIndex].AllottBed(bed);
+                        MessageBox.Show("Record Added Successfully!");
+                    }
+                    else
+                    {
+                        DataSource.Data.bed[index] = bed;
+                        DataSource.Data.room[cmbRoomID.SelectedIndex].UpdateBed(bed);
+                        MessageBox.Show("Record Updated Successfully!");
 
-                MessageBox.Show("Record Added Successfully!");
-
-                this.Close();
+                    }
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Record Not " + heading + "ed!");
+                }
             }
             else
             {
-                MessageBox.Show("Record Not " + heading + "ed");
-
+                MessageBox.Show("Choose Room ID!");
             }
         }
 
@@ -48,6 +68,33 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             Dashboard dashboard = new Dashboard();
             this.Hide();
             dashboard.Show();
+        }
+
+        private void Bed_Load(object sender, EventArgs e)
+        {
+            txtID.Enabled = false;
+            if (heading.Contains("Add"))
+            {
+                cmbStatus.Enabled = false;
+            }
+            else
+            {
+                txtID.Text = bed1.ID;
+                cmbStatus.Text = bed1.Status;
+            }
+            List<string> room = new List<string>();
+            foreach (var item in DataSource.Data.room)
+            {
+                room.Add(item.ID);
+            }
+            cmbRoomID.DataSource = room;
+        }
+
+        private void cmbRoomID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (heading.Contains("Add"))
+                txtID.Enabled = true;
+            cmbStatus.Enabled = true;
         }
     }
 }

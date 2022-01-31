@@ -43,13 +43,15 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.label7 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.cmbRoomID = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblText
             // 
             this.lblText.AutoSize = true;
             this.lblText.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblText.Location = new System.Drawing.Point(196, 34);
+            this.lblText.Location = new System.Drawing.Point(193, 26);
             this.lblText.Name = "lblText";
             this.lblText.Size = new System.Drawing.Size(189, 31);
             this.lblText.TabIndex = 1;
@@ -60,7 +62,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(96, 115);
+            this.label2.Location = new System.Drawing.Point(96, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 23);
             this.label2.TabIndex = 1;
@@ -70,7 +72,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(96, 279);
+            this.label3.Location = new System.Drawing.Point(96, 309);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 23);
             this.label3.TabIndex = 2;
@@ -80,7 +82,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(96, 238);
+            this.label4.Location = new System.Drawing.Point(96, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 23);
             this.label4.TabIndex = 3;
@@ -90,7 +92,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(96, 197);
+            this.label5.Location = new System.Drawing.Point(96, 225);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 23);
             this.label5.TabIndex = 4;
@@ -100,7 +102,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(96, 156);
+            this.label6.Location = new System.Drawing.Point(96, 183);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 23);
             this.label6.TabIndex = 5;
@@ -109,48 +111,48 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(242, 109);
+            this.txtName.Location = new System.Drawing.Point(242, 138);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(247, 29);
-            this.txtName.TabIndex = 6;
+            this.txtName.TabIndex = 0;
             // 
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(242, 151);
+            this.txtID.Location = new System.Drawing.Point(242, 180);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(247, 29);
-            this.txtID.TabIndex = 6;
+            this.txtID.TabIndex = 1;
             // 
             // txtCNIC
             // 
             this.txtCNIC.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCNIC.Location = new System.Drawing.Point(242, 193);
+            this.txtCNIC.Location = new System.Drawing.Point(242, 222);
             this.txtCNIC.Name = "txtCNIC";
             this.txtCNIC.Size = new System.Drawing.Size(247, 29);
-            this.txtCNIC.TabIndex = 6;
+            this.txtCNIC.TabIndex = 2;
             // 
             // txtPhoneNo
             // 
             this.txtPhoneNo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNo.Location = new System.Drawing.Point(242, 277);
+            this.txtPhoneNo.Location = new System.Drawing.Point(242, 306);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.Size = new System.Drawing.Size(247, 29);
-            this.txtPhoneNo.TabIndex = 6;
+            this.txtPhoneNo.TabIndex = 4;
             // 
             // txtDOB
             // 
             this.txtDOB.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDOB.Location = new System.Drawing.Point(242, 235);
+            this.txtDOB.Location = new System.Drawing.Point(242, 264);
             this.txtDOB.Name = "txtDOB";
             this.txtDOB.Size = new System.Drawing.Size(247, 29);
-            this.txtDOB.TabIndex = 6;
+            this.txtDOB.TabIndex = 3;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(96, 320);
+            this.label7.Location = new System.Drawing.Point(96, 351);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 23);
             this.label7.TabIndex = 2;
@@ -159,27 +161,53 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(242, 319);
+            this.txtAddress.Location = new System.Drawing.Point(242, 348);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(247, 29);
-            this.txtAddress.TabIndex = 6;
+            this.txtAddress.TabIndex = 5;
             // 
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(217, 387);
+            this.btnSubmit.Location = new System.Drawing.Point(218, 412);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(138, 37);
-            this.btnSubmit.TabIndex = 7;
+            this.btnSubmit.TabIndex = 6;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // cmbRoomID
+            // 
+            this.cmbRoomID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbRoomID.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRoomID.FormattingEnabled = true;
+            this.cmbRoomID.Location = new System.Drawing.Point(242, 96);
+            this.cmbRoomID.Name = "cmbRoomID";
+            this.cmbRoomID.Size = new System.Drawing.Size(247, 29);
+            this.cmbRoomID.TabIndex = 34;
+            this.cmbRoomID.Text = "Choose Room ID...";
+            this.cmbRoomID.SelectedIndexChanged += new System.EventHandler(this.cmbRoomID_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(96, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 23);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Room ID";
             // 
             // Allottee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 461);
+            this.ClientSize = new System.Drawing.Size(584, 480);
+            this.Controls.Add(this.cmbRoomID);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtDOB);
             this.Controls.Add(this.txtAddress);
@@ -198,6 +226,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Allottee";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Allottee_FormClosing);
+            this.Load += new System.EventHandler(this.Allottee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +248,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.ComboBox cmbRoomID;
+        private System.Windows.Forms.Label label1;
     }
 }

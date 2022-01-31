@@ -14,9 +14,12 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
     public partial class Room : Form
     {
         private string heading;
-        public Room(string heading)
+        private RoomModel room1;
+        private int index;
+        public Room(string heading, RoomModel room, int index)
         {
-
+            this.index = index;
+            this.room1 = room;
             InitializeComponent();
             this.heading = heading;
             lblText.Text = heading;
@@ -27,19 +30,25 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             if (txtID.Text.Trim() != "")
             {
                 RoomModel room = new RoomModel(
-                    txtNoOfBed.Text,
                     txtFloor.Text,
-                    txtID.Text,
-                    txtNoOfAllottee.Text
+                    txtID.Text
                 );
-                DataSource.Data.room.Add(room);
-                MessageBox.Show("Record Added Successfully!");
-                
+                if (heading.Contains("Add"))
+                {
+                    DataSource.Data.room.Add(room);
+                    MessageBox.Show("Record Added Successfully!");
+                }
+                else
+                {
+                    DataSource.Data.room[index] = room;
+                    MessageBox.Show("Record Updated Successfully!");
+
+                }
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Record Not "+ heading+"ed");
+                MessageBox.Show("Record Not " + heading + "ed");
 
             }
         }
@@ -49,6 +58,16 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             Dashboard dashboard = new Dashboard();
             this.Hide();
             dashboard.Show();
+        }
+
+        private void Room_Load(object sender, EventArgs e)
+        {
+            if (!heading.Contains("Add"))
+            {
+                txtID.Text = room1.ID;
+                txtFloor.Text = room1.RoomFloor;
+                txtID.Enabled = false;
+            }
         }
     }
 }

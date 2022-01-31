@@ -39,8 +39,8 @@ namespace Hostel_Managment_System.PAL
             // 
             // cmbType
             // 
-            this.cmbType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbType.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbType.FormattingEnabled = true;
@@ -52,7 +52,7 @@ namespace Hostel_Managment_System.PAL
             this.cmbType.Location = new System.Drawing.Point(181, 124);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(157, 29);
-            this.cmbType.TabIndex = 6;
+            this.cmbType.TabIndex = 0;
             this.cmbType.Text = "Choose type...";
             this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged);
             // 
@@ -88,25 +88,25 @@ namespace Hostel_Managment_System.PAL
             // 
             // cmbID
             // 
-            this.cmbID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbID.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbID.FormattingEnabled = true;
             this.cmbID.Location = new System.Drawing.Point(181, 176);
             this.cmbID.Name = "cmbID";
             this.cmbID.Size = new System.Drawing.Size(157, 29);
-            this.cmbID.TabIndex = 6;
+            this.cmbID.TabIndex = 1;
             this.cmbID.Text = "Choose ID...";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(125, 248);
+            this.button1.Location = new System.Drawing.Point(125, 253);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 37);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Submit";
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

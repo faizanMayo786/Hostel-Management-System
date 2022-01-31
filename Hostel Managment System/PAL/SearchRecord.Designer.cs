@@ -43,7 +43,7 @@ namespace Hostel_Managment_System.PAL.AddUpdateRecordForms
             this.btnSearch.Location = new System.Drawing.Point(125, 270);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(123, 37);
-            this.btnSearch.TabIndex = 5;
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -73,7 +73,7 @@ namespace Hostel_Managment_System.PAL.AddUpdateRecordForms
             this.cmbType.Location = new System.Drawing.Point(181, 134);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(157, 29);
-            this.cmbType.TabIndex = 10;
+            this.cmbType.TabIndex = 0;
             this.cmbType.Text = "Choose type...";
             this.cmbType.SelectedValueChanged += new System.EventHandler(this.cmbType_SelectedValueChanged);
             // 
@@ -103,7 +103,7 @@ namespace Hostel_Managment_System.PAL.AddUpdateRecordForms
             this.txtID.Location = new System.Drawing.Point(181, 189);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(157, 29);
-            this.txtID.TabIndex = 11;
+            this.txtID.TabIndex = 1;
             // 
             // SearchRecord
             // 
@@ -119,6 +119,7 @@ namespace Hostel_Managment_System.PAL.AddUpdateRecordForms
             this.Name = "SearchRecord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchRecord";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SearchRecord_FormClosing);
             this.Load += new System.EventHandler(this.SearchRecord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
