@@ -81,22 +81,22 @@ namespace Hostel_Managment_System.PAL
                         switch (cmbType.SelectedIndex)
                         {
                             case 0:
-                                DataSource.Data.allotte.RemoveAt(cmbType.SelectedIndex);
+                                DataSource.Data.allotte.RemoveAt(cmbID.SelectedIndex);
                                 MessageBox.Show("Record Deleted");
                                 this.Close();
                                 break;
                             case 1:
-                                DataSource.Data.payment.RemoveAt(cmbType.SelectedIndex);
+                                DataSource.Data.payment.RemoveAt(cmbID.SelectedIndex);
                                 MessageBox.Show("Record Deleted");
                                 this.Close();
                                 break;
                             case 2:
-                                DataSource.Data.room.RemoveAt(cmbType.SelectedIndex);
+                                DataSource.Data.room.RemoveAt(cmbID.SelectedIndex);
                                 MessageBox.Show("Record Deleted");
                                 this.Close();
                                 break;
                             case 3:
-                                DataSource.Data.bed.RemoveAt(cmbType.SelectedIndex);
+                                DataSource.Data.bed.RemoveAt(cmbID.SelectedIndex);
                                 MessageBox.Show("Record Deleted");
                                 this.Close();
                                 break;
