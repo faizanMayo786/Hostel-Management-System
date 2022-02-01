@@ -56,3 +56,7 @@ D:\Study\Git Projects\Hostel Management\tooba\Hostel-Management-System\Hostel Ma
 D:\Study\Git Projects\Hostel Management\tooba\Hostel-Management-System\Hostel Managment System\obj\Debug\Hostel Managment System.csproj.CopyComplete
 D:\Study\Git Projects\Hostel Management\tooba\Hostel-Management-System\Hostel Managment System\obj\Debug\Hostel Managment System.exe
 D:\Study\Git Projects\Hostel Management\tooba\Hostel-Management-System\Hostel Managment System\obj\Debug\Hostel Managment System.pdb
+C:\Users\Mayo\Desktop\Desktop\OOP\Final Projects\Hostel Managment System\Hostel Managment System\bin\Debug\Hostel Managment System.exe.manifest
+C:\Users\Mayo\Desktop\Desktop\OOP\Final Projects\Hostel Managment System\Hostel Managment System\bin\Debug\Hostel Managment System.application
+C:\Users\Mayo\Desktop\Desktop\OOP\Final Projects\Hostel Managment System\Hostel Managment System\obj\Debug\Hostel Managment System.exe.manifest
+C:\Users\Mayo\Desktop\Desktop\OOP\Final Projects\Hostel Managment System\Hostel Managment System\obj\Debug\Hostel Managment System.application

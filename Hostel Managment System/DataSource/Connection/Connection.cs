@@ -12,7 +12,7 @@ namespace Hostel_Managment_System.DataSource.Connection
     {
         public static SqlConnection GetConnection()
         {
-            string conn = "Data Source  =MAYO; Initial Catalog = HMS;Integrated Security = true;";
+            string conn = "Data Source=MAYO;Initial Catalog=HMS;Integrated Security=True";
             SqlConnection connection = new SqlConnection(conn);
             try
             {
