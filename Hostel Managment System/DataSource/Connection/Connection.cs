@@ -18,7 +18,7 @@ namespace Hostel_Managment_System.DataSource.Connection
             {
                 connection.Open();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("DB not Connected!");
             }

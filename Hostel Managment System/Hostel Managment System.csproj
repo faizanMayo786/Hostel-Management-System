@@ -61,6 +61,10 @@
     <Compile Include="BAL\Payment\PaymentModel.cs" />
     <Compile Include="BAL\Room\RoomModel.cs" />
     <Compile Include="DataSource\Connection\Connection.cs" />
+    <Compile Include="DataSource\CRUD\ReadRecord\Allottee.cs" />
+    <Compile Include="DataSource\CRUD\ReadRecord\Room.cs" />
+    <Compile Include="DataSource\CRUD\ReadRecord\Bed.cs" />
+    <Compile Include="DataSource\CRUD\ReadRecord\Payment.cs" />
     <Compile Include="DataSource\Data.cs" />
     <Compile Include="DataSource\Login\Login.cs" />
     <Compile Include="PAL\AddUpdateRecord.cs">
@@ -229,6 +233,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-list-view-100.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DataSource\CRUD\AddRecord\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
