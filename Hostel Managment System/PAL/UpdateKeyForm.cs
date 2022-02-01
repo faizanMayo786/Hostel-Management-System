@@ -42,11 +42,9 @@ namespace Hostel_Managment_System.PAL
                         heading + " Payment Record",
                         DataSource.Data.payment[cmbRecordID.SelectedIndex],
                         cmbRecordID.SelectedIndex
-
                         );
                     this.Close();
                     payment.Show();
-
                     break;
                 case 2:
                     Room room = new Room(
