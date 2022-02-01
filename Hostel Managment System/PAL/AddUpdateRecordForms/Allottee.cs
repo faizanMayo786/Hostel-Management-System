@@ -54,6 +54,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                         DataSource.Data
                             .room[cmbRoomID.SelectedIndex]
                             .UpdateAllott(allotte);
+                        DataSource.CRUD.UpdateRecord.Allottee.UpdateAllotteeRecord(allotte);
                         MessageBox.Show("Record " + heading + " Successfully!");
 
                     }

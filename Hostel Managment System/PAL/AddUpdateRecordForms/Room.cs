@@ -42,6 +42,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                 else
                 {
                     DataSource.Data.room[index] = room;
+                    DataSource.CRUD.UpdateRecord.Room.UpdateRoomRecord(room);
+
                     MessageBox.Show("Record Updated Successfully!");
 
                 }

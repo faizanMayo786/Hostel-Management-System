@@ -64,6 +64,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                 {
                     DataSource.Data.payment[index] = payment;
                     DataSource.Data.allotte[cmbAllotteID.SelectedIndex].AddPayment(payment); MessageBox.Show("Record Added Successfully!");
+                    DataSource.CRUD.UpdateRecord.Payment.UpdatePaymentRecord(payment);
+
                     MessageBox.Show("Record Updated Successfully!");
 
                 }

@@ -69,6 +69,10 @@
     <Compile Include="DataSource\CRUD\ReadRecord\Room.cs" />
     <Compile Include="DataSource\CRUD\ReadRecord\Bed.cs" />
     <Compile Include="DataSource\CRUD\ReadRecord\Payment.cs" />
+    <Compile Include="DataSource\CRUD\UpdateRecord\Allottee.cs" />
+    <Compile Include="DataSource\CRUD\UpdateRecord\Bed.cs" />
+    <Compile Include="DataSource\CRUD\UpdateRecord\Payment.cs" />
+    <Compile Include="DataSource\CRUD\UpdateRecord\Room.cs" />
     <Compile Include="DataSource\Data.cs" />
     <Compile Include="DataSource\Login\Login.cs" />
     <Compile Include="PAL\AddUpdateRecord.cs">
@@ -239,7 +243,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataSource\CRUD\DeleteRecord\" />
-    <Folder Include="DataSource\CRUD\UpdateRecord\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

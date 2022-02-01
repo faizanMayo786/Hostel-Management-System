@@ -49,6 +49,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                     {
                         DataSource.Data.bed[index] = bed;
                         DataSource.Data.room[cmbRoomID.SelectedIndex].UpdateBed(bed);
+                        DataSource.CRUD.UpdateRecord.Bed.UpdateBedRecord(bed);
+
                         MessageBox.Show("Record Updated Successfully!");
 
                     }
