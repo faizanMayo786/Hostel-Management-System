@@ -45,6 +45,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                         DataSource.Data
                             .room[cmbRoomID.SelectedIndex]
                             .AllottRoom(allotte);
+                        DataSource.CRUD.CreateRecord.Allottee.AddAllotteeRecord(allotte);
                         MessageBox.Show("Record " + heading + " Successfully!");
                     }
                     else

@@ -41,7 +41,9 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                     {
                         DataSource.Data.bed.Add(bed);
                         DataSource.Data.room[cmbRoomID.SelectedIndex].AllottBed(bed);
+                        DataSource.CRUD.CreateRecord.Bed.AddBedRecord(bed);
                         MessageBox.Show("Record Added Successfully!");
+
                     }
                     else
                     {

@@ -36,6 +36,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                 if (heading.Contains("Add"))
                 {
                     DataSource.Data.room.Add(room);
+                    DataSource.CRUD.CreateRecord.Room.AddRoomRecord(room);
                     MessageBox.Show("Record Added Successfully!");
                 }
                 else
