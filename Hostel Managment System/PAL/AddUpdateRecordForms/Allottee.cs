@@ -46,6 +46,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                             .room[cmbRoomID.SelectedIndex]
                             .AllottRoom(allotte);
                         DataSource.CRUD.CreateRecord.Allottee.AddAllotteeRecord(allotte);
+                        DataSource.CRUD.UpdateRecord.Room.UpdateRoomRecord(DataSource.Data
+                            .room[cmbRoomID.SelectedIndex]);
                         MessageBox.Show("Record " + heading + " Successfully!");
                     }
                     else
@@ -55,6 +57,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                             .room[cmbRoomID.SelectedIndex]
                             .UpdateAllott(allotte);
                         DataSource.CRUD.UpdateRecord.Allottee.UpdateAllotteeRecord(allotte);
+                        DataSource.CRUD.UpdateRecord.Room.UpdateRoomRecord(DataSource.Data
+                              .room[cmbRoomID.SelectedIndex]);
                         MessageBox.Show("Record " + heading + " Successfully!");
 
                     }

@@ -82,22 +82,25 @@ namespace Hostel_Managment_System.PAL
                         {
                             case 0:
                                 DataSource.Data.allotte.RemoveAt(cmbID.SelectedIndex);
-
+                                DataSource.CRUD.DeleteRecord.Allottee.DeleteAllotteeRecord(cmbID.SelectedItem.ToString());
                                 MessageBox.Show("Record Deleted");
                                 this.Close();
                                 break;
                             case 1:
                                 DataSource.Data.payment.RemoveAt(cmbID.SelectedIndex);
+                                DataSource.CRUD.DeleteRecord.Payment.DeletePaymentRecord(cmbID.SelectedItem.ToString());
                                 MessageBox.Show("Record Deleted");
                                 this.Close();
                                 break;
                             case 2:
                                 DataSource.Data.room.RemoveAt(cmbID.SelectedIndex);
+                                DataSource.CRUD.DeleteRecord.Room.DeleteRoomRecord(cmbID.SelectedItem.ToString());
                                 MessageBox.Show("Record Deleted");
                                 this.Close();
                                 break;
                             case 3:
                                 DataSource.Data.bed.RemoveAt(cmbID.SelectedIndex);
+                                DataSource.CRUD.DeleteRecord.Bed.DeleteBedRecord(cmbID.SelectedItem.ToString());
                                 MessageBox.Show("Record Deleted");
                                 this.Close();
                                 break;

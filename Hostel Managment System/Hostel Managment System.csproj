@@ -65,6 +65,10 @@
     <Compile Include="DataSource\CRUD\CreateRecord\Room.cs" />
     <Compile Include="DataSource\CRUD\CreateRecord\Bed.cs" />
     <Compile Include="DataSource\CRUD\CreateRecord\Allottee.cs" />
+    <Compile Include="DataSource\CRUD\DeleteRecord\Room.cs" />
+    <Compile Include="DataSource\CRUD\DeleteRecord\Bed.cs" />
+    <Compile Include="DataSource\CRUD\DeleteRecord\Payment.cs" />
+    <Compile Include="DataSource\CRUD\DeleteRecord\Allottee.cs" />
     <Compile Include="DataSource\CRUD\ReadRecord\Allottee.cs" />
     <Compile Include="DataSource\CRUD\ReadRecord\Room.cs" />
     <Compile Include="DataSource\CRUD\ReadRecord\Bed.cs" />
@@ -241,8 +245,6 @@
   <ItemGroup>
     <None Include="Resources\icons8-list-view-100.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataSource\CRUD\DeleteRecord\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

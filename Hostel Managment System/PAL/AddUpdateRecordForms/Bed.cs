@@ -42,6 +42,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                         DataSource.Data.bed.Add(bed);
                         DataSource.Data.room[cmbRoomID.SelectedIndex].AllottBed(bed);
                         DataSource.CRUD.CreateRecord.Bed.AddBedRecord(bed);
+                        DataSource.CRUD.UpdateRecord.Room.UpdateRoomRecord(DataSource.Data
+                             .room[cmbRoomID.SelectedIndex]);
                         MessageBox.Show("Record Added Successfully!");
 
                     }
@@ -50,7 +52,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                         DataSource.Data.bed[index] = bed;
                         DataSource.Data.room[cmbRoomID.SelectedIndex].UpdateBed(bed);
                         DataSource.CRUD.UpdateRecord.Bed.UpdateBedRecord(bed);
-
+                        DataSource.CRUD.UpdateRecord.Room.UpdateRoomRecord(DataSource.Data
+                             .room[cmbRoomID.SelectedIndex]);
                         MessageBox.Show("Record Updated Successfully!");
 
                     }
