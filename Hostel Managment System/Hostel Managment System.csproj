@@ -234,7 +234,9 @@
     <None Include="Resources\icons8-list-view-100.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataSource\CRUD\AddRecord\" />
+    <Folder Include="DataSource\CRUD\CreateRecord\" />
+    <Folder Include="DataSource\CRUD\DeleteRecord\" />
+    <Folder Include="DataSource\CRUD\UpdateRecord\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,7 +19,8 @@ namespace Hostel_Managment_System.PAL
 
         private void Login_Load(object sender, EventArgs e)
         {
-            Task.Run(() => {
+            Task.Run(() =>
+            {
                 DataSource.Connection.Connection.GetConnection();
             });
         }
@@ -29,7 +30,7 @@ namespace Hostel_Managment_System.PAL
             BAL.AdminModel admin = new BAL.AdminModel(
                 txtEmail.Text,
                 txtPassword.Text
-                ) ;
+                );
             if (BAL.Login.VerifyAdmin.Authentication(admin))
             {
                 btnLogin.Tag = "Login";
@@ -47,72 +48,6 @@ namespace Hostel_Managment_System.PAL
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             if (btnLogin.Tag.ToString() == "Login")
             {
                 return;
