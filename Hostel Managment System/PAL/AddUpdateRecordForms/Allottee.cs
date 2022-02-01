@@ -15,7 +15,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
     {
         private string heading;
         private AllotteeModel allottee1;
-        private int 8index;
+        private int index;
         public Allottee(string heading, AllotteeModel allottee, int index)
         {
             InitializeComponent();
