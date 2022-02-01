@@ -60,6 +60,7 @@
     <Compile Include="BAL\Bed\BedModel.cs" />
     <Compile Include="BAL\Payment\PaymentModel.cs" />
     <Compile Include="BAL\Room\RoomModel.cs" />
+    <Compile Include="DataSource\Connection\Connection.cs" />
     <Compile Include="DataSource\Data.cs" />
     <Compile Include="PAL\AddUpdateRecord.cs">
       <SubType>Form</SubType>

@@ -82,6 +82,7 @@ namespace Hostel_Managment_System.PAL
                         {
                             case 0:
                                 DataSource.Data.allotte.RemoveAt(cmbID.SelectedIndex);
+
                                 MessageBox.Show("Record Deleted");
                                 this.Close();
                                 break;

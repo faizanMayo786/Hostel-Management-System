@@ -19,7 +19,9 @@ namespace Hostel_Managment_System.PAL
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            Task.Run(() => {
+                DataSource.Connection.Connection.GetConnection();
+            });
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace Hostel_Managment_System.PAL
                 MessageBox.Show("Login Successful!");
                 Dashboard dashboard = new Dashboard();
                 this.Hide();
-                this.Close();
+                this.Close();/**/
                 dashboard.Show();
             }
             else
@@ -45,7 +47,73 @@ namespace Hostel_Managment_System.PAL
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(btnLogin.Tag.ToString() == "Login")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            if (btnLogin.Tag.ToString() == "Login")
             {
                 return;
             }
