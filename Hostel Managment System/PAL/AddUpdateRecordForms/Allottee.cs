@@ -37,8 +37,14 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                         txtDOB.Text,
                         txtPhoneNo.Text,
                         txtName.Text,
-                        txtAddress.Text
+                        txtAddress.Text,
+                        cmbBedID.SelectedItem.ToString(),
+                        cmbRoomID.SelectedItem.ToString()
+
                     );
+                    DataSource.Data.bed[cmbBedID.SelectedIndex].AllotteID = allotte.ID;
+                    DataSource.CRUD.UpdateRecord.Bed.UpdateBedRecord(DataSource.Data.bed[cmbBedID.SelectedIndex]);
+                    DataSource.Data.room[cmbRoomID.SelectedIndex].UpdateBed(DataSource.Data.bed[cmbBedID.SelectedIndex]);
                     if (heading.Contains("Add"))
                     {
                         DataSource.Data.allotte.Add(allotte);
@@ -46,6 +52,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                             .room[cmbRoomID.SelectedIndex]
                             .AllottRoom(allotte);
                         DataSource.CRUD.CreateRecord.Allottee.AddAllotteeRecord(allotte);
+                        DataSource.Data.room[cmbRoomID.SelectedIndex].
+                            UpdateBed(DataSource.Data.bed[cmbBedID.SelectedIndex]);
                         DataSource.CRUD.UpdateRecord.Room.UpdateRoomRecord(DataSource.Data
                             .room[cmbRoomID.SelectedIndex]);
                         MessageBox.Show("Record " + heading + " Successfully!");
@@ -85,31 +93,42 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
 
         private void Allottee_Load(object sender, EventArgs e)
         {
-            if (heading.Contains("Add"))
-            {
-                txtID.Enabled = false;
-                txtCNIC.Enabled = false;
-                txtDOB.Enabled = false;
-                txtPhoneNo.Enabled = false;
-                txtName.Enabled = false;
-                txtAddress.Enabled = false;
-            }
-            else
-            {
-                txtID.Text = allottee1.ID;
-                txtID.Enabled = false;
-                txtCNIC.Text = allottee1.CNIC;
-                txtDOB.Text = allottee1.DOB;
-                txtPhoneNo.Text = allottee1.PhoneNumber;
-                txtName.Text = allottee1.Name;
-                txtAddress.Text = allottee1.Address;
-            }
             List<string> room = new List<string>();
             foreach (var item in DataSource.Data.room)
             {
                 room.Add(item.ID);
             }
             cmbRoomID.DataSource = room;
+            List<string> bed = new List<string>();
+            foreach (var item in DataSource.Data.bed)
+            {
+                bed.Add(item.ID);
+            }
+            cmbBedID.DataSource = bed;
+            if (heading.Contains("Add"))
+            {
+
+                txtID.Enabled = false;
+                txtCNIC.Enabled = false;
+                txtDOB.Enabled = false;
+                txtPhoneNo.Enabled = false;
+                txtName.Enabled = false;
+                txtAddress.Enabled = false;
+                cmbBedID.Enabled = false;
+            }
+            else
+            {
+                cmbRoomID.Text = allottee1.roomId;
+                txtID.Text = allottee1.ID;
+                txtID.Enabled = false;
+                txtCNIC.Text = allottee1.CNIC;
+                txtDOB.Text = allottee1.DOB;
+                txtPhoneNo.Text = allottee1.PhoneNumber;
+                txtName.Text = allottee1.Name;
+                cmbBedID.Text = allottee1.bedId;
+                txtAddress.Text = allottee1.Address;
+            }
+
         }
 
         private void cmbRoomID_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,6 +139,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             txtDOB.Enabled = true;
             txtPhoneNo.Enabled = true;
             txtName.Enabled = true;
+            cmbBedID.Enabled = true;
             txtAddress.Enabled = true;
 
         }

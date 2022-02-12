@@ -30,10 +30,24 @@ namespace Hostel_Managment_System.DataSource.CRUD.ReadRecord
                     dob: dataRow.Field<string>("dob"),
                     phoneNumber: dataRow.Field<string>("phoneNumber"),
                     name: dataRow.Field<string>("name"),
-                    address: dataRow.Field<string>("address")
+                    address: dataRow.Field<string>("address"),
+                    bedId: dataRow.Field<string>("bedId"),
+                    roomId: dataRow.Field<string>("roomId"),
+                    paymentId: dataRow.Field<string>("paymentId")
                     )
                 ).ToList();
                 DataSource.Data.allotte = AllotteList;
+                foreach (var allot in DataSource.Data.allotte)
+                {
+                    foreach (var room in DataSource.Data.room)
+                    {
+                        if (allot.roomId == room.ID)
+                        {
+                            room.AllottRoom(allot);
+
+                        }
+                    }
+                }
             }
             catch (Exception)
             {

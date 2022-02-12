@@ -10,11 +10,12 @@ namespace Hostel_Managment_System.BAL.Payment
     {
         public string ID { get; set; }
         public string Date { get; set; }
-
-        public PaymentModel(string id, string date)
+        public string AllotteId { get; set; }
+        public PaymentModel(string id = "", string date = "", string allotteId = "")
         {
             ID = id;
             Date = date;
+            this.AllotteId = allotteId;
         }
         public override string ToString()
         {

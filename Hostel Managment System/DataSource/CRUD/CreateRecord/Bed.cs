@@ -13,7 +13,7 @@ namespace Hostel_Managment_System.DataSource.CRUD.CreateRecord
     {
         public static void AddBedRecord(BedModel bed)
         {
-            string qry = $"INSERT INTO Bed (id, status) VALUES('{bed.ID}', '{bed.Status}'); ";
+            string qry = $"INSERT INTO Bed (id, status,roomId,allotteId) VALUES('{bed.ID}', '{bed.Status}','{bed.RoomId}','{bed.AllotteID}'); ";
             SqlConnection connection = DataSource.Connection.Connection.GetConnection();
             SqlCommand command = new SqlCommand(qry, connection);
             command.CommandType = System.Data.CommandType.Text;

@@ -12,7 +12,7 @@ namespace Hostel_Managment_System.DataSource.CRUD.UpdateRecord
     {
         public static void UpdatePaymentRecord(PaymentModel payment)
         {
-            string qry = $"UPDATE Payment SET(id = '{payment.ID}', , date = '{payment.Date}')  WHERE id = '{payment.ID}'";
+            string qry = $"UPDATE Payment SET  id = '{payment.ID}', , date = '{payment.Date}' WHERE id = '{payment.ID}'";
             SqlConnection connection = DataSource.Connection.Connection.GetConnection();
             SqlCommand command = new SqlCommand(qry, connection);
             command.CommandType = System.Data.CommandType.Text;

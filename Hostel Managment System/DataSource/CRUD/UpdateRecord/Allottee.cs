@@ -12,18 +12,14 @@ namespace Hostel_Managment_System.DataSource.CRUD.UpdateRecord
     {
         public static void UpdateAllotteeRecord(AllotteeModel allottee)
         {
-            string qry = $"UPDATE Allottee SET(id = '{allottee.ID}', , name = '{allottee.Name}',phoneNumber='{allottee.PhoneNumber}',cnic = '{allottee.CNIC}',dob = '{allottee.DOB}',address = '{allottee.Address}',paymentId = '{allottee.PaymentID}')  WHERE id = '{allottee.ID}'";
+            string qry = $"UPDATE Allottee SET id = '{allottee.ID}',  name = '{allottee.Name}',phoneNumber='{allottee.PhoneNumber}',cnic = '{allottee.CNIC}'," +
+                $"dob = '{allottee.DOB}',address = '{allottee.Address}',paymentId = '{allottee.PaymentID}',roomId = '{allottee.roomId}',bedId = '{allottee.bedId}'  WHERE id = '{allottee.ID}'";
             SqlConnection connection = DataSource.Connection.Connection.GetConnection();
             SqlCommand command = new SqlCommand(qry, connection);
             command.CommandType = System.Data.CommandType.Text;
-            try
-            {
-                command.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
 
-            }
+            command.ExecuteNonQuery();
+
         }
     }
 }

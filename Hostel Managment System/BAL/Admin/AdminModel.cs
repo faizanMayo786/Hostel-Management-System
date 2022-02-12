@@ -12,12 +12,12 @@ namespace Hostel_Managment_System.BAL
 
         public string Username { get; set; }
         public string Password { get; set; }
-        public AdminModel(string username,string password)
+        public AdminModel(string username, string password)
         {
             Username = username;
             Password = password;
         }
 
-        
+
     }
 }

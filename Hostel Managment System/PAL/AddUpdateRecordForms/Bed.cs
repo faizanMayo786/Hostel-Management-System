@@ -35,7 +35,9 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                 {
                     BedModel bed = new BedModel(
                         txtID.Text,
-                        cmbStatus.Text.ToString()
+                        cmbStatus.Text.ToString(),
+                        cmbRoomID.SelectedItem.ToString(),
+                        "Available"
                     );
                     if (heading.Contains("Add"))
                     {
@@ -101,7 +103,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
         {
             if (heading.Contains("Add"))
                 txtID.Enabled = true;
-            cmbStatus.Enabled = true;
+            cmbStatus.Enabled = false;
         }
     }
 }

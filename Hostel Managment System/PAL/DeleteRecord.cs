@@ -81,6 +81,14 @@ namespace Hostel_Managment_System.PAL
                         switch (cmbType.SelectedIndex)
                         {
                             case 0:
+                                foreach (var room in DataSource.Data.room)
+                                {
+                                    if (room.ID == cmbID.SelectedItem.ToString())
+                                    {
+                                        room.RemoveAllott(DataSource.Data.allotte[cmbID.SelectedIndex]);
+
+                                    }
+                                }
                                 DataSource.Data.allotte.RemoveAt(cmbID.SelectedIndex);
                                 DataSource.CRUD.DeleteRecord.Allottee.DeleteAllotteeRecord(cmbID.SelectedItem.ToString());
                                 MessageBox.Show("Record Deleted");

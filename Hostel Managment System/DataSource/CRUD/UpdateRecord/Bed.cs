@@ -12,7 +12,7 @@ namespace Hostel_Managment_System.DataSource.CRUD.UpdateRecord
     {
         public static void UpdateBedRecord(BedModel bed)
         {
-            string qry = $"UPDATE Allottee SET(id = '{bed.ID}', , status = '{bed.Status}')  WHERE id = '{bed.ID}'";
+            string qry = $"UPDATE Bed SET  id = '{bed.ID}',  status = '{bed.Status}',roomId = '{bed.RoomId}', allotteId = '{bed.AllotteID}'   WHERE id = '{bed.ID}'";
             SqlConnection connection = DataSource.Connection.Connection.GetConnection();
             SqlCommand command = new SqlCommand(qry, connection);
             command.CommandType = System.Data.CommandType.Text;

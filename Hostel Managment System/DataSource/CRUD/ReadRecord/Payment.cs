@@ -27,6 +27,7 @@ namespace Hostel_Managment_System.DataSource.CRUD.ReadRecord
                 .Select(dataRow => new PaymentModel(
                     id: dataRow.Field<string>("id"),
                     date: dataRow.Field<string>("date")
+                    , allotteId: dataRow.Field<string>("allotteId")
                     )
                 ).ToList();
                 DataSource.Data.payment = paymentList;

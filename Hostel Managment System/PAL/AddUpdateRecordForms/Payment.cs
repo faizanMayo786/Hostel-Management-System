@@ -69,6 +69,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                     MessageBox.Show("Record Updated Successfully!");
 
                 }
+                DataSource.CRUD.UpdateRecord.Allottee.UpdateAllotteeRecord(
+                    DataSource.Data.allotte[cmbAllotteID.SelectedIndex]);
                 this.Close();
             }
             else

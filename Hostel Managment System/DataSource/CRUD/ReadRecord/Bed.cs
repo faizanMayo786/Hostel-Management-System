@@ -27,10 +27,23 @@ namespace Hostel_Managment_System.DataSource.CRUD.ReadRecord
                 var bedList = ds.Tables[0].AsEnumerable()
                 .Select(dataRow => new BedModel(
                     id: dataRow.Field<string>("id"),
-                    status: dataRow.Field<string>("status")
+                    status: dataRow.Field<string>("status"),
+                    roomId: dataRow.Field<string>("roomId"),
+                    allotteId: dataRow.Field<string>("allotteId")
                     )
                 ).ToList();
                 DataSource.Data.bed = bedList;
+                foreach (var bed in DataSource.Data.bed)
+                {
+                    foreach (var room in DataSource.Data.room)
+                    {
+                        if (bed.RoomId == room.ID)
+                        {
+                            room.AllottBed(bed);
+
+                        }
+                    }
+                }
             }
             catch (Exception)
             {

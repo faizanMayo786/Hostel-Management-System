@@ -13,7 +13,7 @@ namespace Hostel_Managment_System.DataSource.CRUD.CreateRecord
     {
         public static void AddPaymentRecord(PaymentModel payment)
         {
-            string qry = $"INSERT INTO Payment (id,date) VALUES('{payment.ID}', '{payment.Date}'); ";
+            string qry = $"INSERT INTO Payment (id,date,allotteId) VALUES('{payment.ID}', '{payment.Date}','{payment.AllotteId}'); ";
             SqlConnection connection = DataSource.Connection.Connection.GetConnection();
             SqlCommand command = new SqlCommand(qry, connection);
             command.CommandType = System.Data.CommandType.Text;

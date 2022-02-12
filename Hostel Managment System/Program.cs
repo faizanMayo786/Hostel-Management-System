@@ -17,10 +17,10 @@ namespace Hostel_Managment_System
         [STAThread]
         static void Main()
         {
-            DataSource.CRUD.ReadRecord.Allottee.GetAllotteeRecord();
-            DataSource.CRUD.ReadRecord.Bed.GetBedRecord();
-            DataSource.CRUD.ReadRecord.Payment.GetPaymentRecord();
             DataSource.CRUD.ReadRecord.Room.GetRoomRecord();
+            DataSource.CRUD.ReadRecord.Bed.GetBedRecord();
+            DataSource.CRUD.ReadRecord.Allottee.GetAllotteeRecord();
+            DataSource.CRUD.ReadRecord.Payment.GetPaymentRecord();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             PAL.Login login = new PAL.Login();

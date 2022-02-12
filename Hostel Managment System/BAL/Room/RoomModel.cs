@@ -39,6 +39,15 @@ namespace Hostel_Managment_System.BAL.Room
                 if (bed.ID == this.bed[i].ID)
                 {
                     this.bed[i] = bed;
+                    if (this.bed[i].AllotteID.Trim() == "")
+                    {
+                        this.bed[i].Status = "Available";
+                    }
+                    else
+                    {
+                        this.bed[i].Status = "Allotted";
+                    }
+
                 }
             }
         }
@@ -46,9 +55,33 @@ namespace Hostel_Managment_System.BAL.Room
         {
             for (int i = 0; i < NoOfAllottee; i++)
             {
+
                 if (allottee.ID == this.allottee[i].ID)
                 {
                     this.allottee[i] = allottee;
+                }
+            }
+        }
+        public void RemoveAllott(AllotteeModel allottee)
+        {
+            for (int i = 0; i < NoOfAllottee; i++)
+            {
+                if (allottee.ID == this.allottee[i].ID)
+                {
+                    foreach (var bed in this.bed)
+                    {
+                        if (bed.ID == allottee.ID)
+                        {
+                            this.bed[i].Status = "Available";
+                        }
+                    }
+                    for (int j = i; j < NoOfAllottee; j++)
+                    {
+                        this.allottee[j] = this.allottee[j + 1];
+                    }
+
+                    NoOfAllottee--;
+                    return;
                 }
             }
         }

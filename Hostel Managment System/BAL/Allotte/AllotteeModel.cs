@@ -16,14 +16,20 @@ namespace Hostel_Managment_System.BAL.Allotte
         public string DOB { get; set; }
         public string Address { get; set; }
         public PaymentModel PaymentID { get; set; }
-        public AllotteeModel(string allotteeID, string cnic, string dob, string phoneNumber, string name, string address)
+        public string roomId { get; set; }
+        public string bedId { get; set; }
+        public AllotteeModel(string allotteeID, string cnic, string dob, string phoneNumber, string name, string address, string bedId = "", string roomId = "", string paymentId = "")
         {
+            this.PaymentID = new PaymentModel();
             ID = allotteeID;
             CNIC = cnic;
             Name = name;
             DOB = dob;
             PhoneNumber = phoneNumber;
             Address = address;
+            this.roomId = roomId;
+            this.PaymentID.ID = paymentId;
+            this.bedId = bedId;
         }
         public void AddPayment(PaymentModel payment)
         {
