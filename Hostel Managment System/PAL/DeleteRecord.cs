@@ -83,10 +83,19 @@ namespace Hostel_Managment_System.PAL
                             case 0:
                                 foreach (var room in DataSource.Data.room)
                                 {
-                                    if (room.ID == cmbID.SelectedItem.ToString())
+                                    if (room.ID == DataSource.Data.allotte[cmbID.SelectedIndex].roomId)
                                     {
                                         room.RemoveAllott(DataSource.Data.allotte[cmbID.SelectedIndex]);
 
+                                    }
+                                }
+                                foreach (var bed in DataSource.Data.bed)
+                                {
+                                    if (bed.ID == DataSource.Data.allotte[cmbID.SelectedIndex].bedId)
+                                    {
+                                        bed.AllotteID = "";
+                                        bed.Status = "Available";
+                                        DataSource.CRUD.UpdateRecord.Bed.UpdateBedRecord(bed);
                                     }
                                 }
                                 DataSource.Data.allotte.RemoveAt(cmbID.SelectedIndex);

@@ -36,8 +36,9 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                     BedModel bed = new BedModel(
                         txtID.Text,
                         cmbStatus.Text.ToString(),
-                        cmbRoomID.SelectedItem.ToString(),
-                        "Available"
+                        cmbRoomID.SelectedItem.ToString()
+
+
                     );
                     if (heading.Contains("Add"))
                     {
@@ -51,6 +52,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                     }
                     else
                     {
+                        bed.AllotteID = bed1.AllotteID;
                         DataSource.Data.bed[index] = bed;
                         DataSource.Data.room[cmbRoomID.SelectedIndex].UpdateBed(bed);
                         DataSource.CRUD.UpdateRecord.Bed.UpdateBedRecord(bed);

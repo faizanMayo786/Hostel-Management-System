@@ -116,7 +116,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(247, 29);
             this.cmbStatus.TabIndex = 1;
-            this.cmbStatus.Text = "Status...";
+            this.cmbStatus.Text = "Available";
             // 
             // label6
             // 

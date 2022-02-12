@@ -62,6 +62,7 @@ namespace Hostel_Managment_System.BAL.Room
                 }
             }
         }
+
         public void RemoveAllott(AllotteeModel allottee)
         {
             for (int i = 0; i < NoOfAllottee; i++)
@@ -70,10 +71,11 @@ namespace Hostel_Managment_System.BAL.Room
                 {
                     foreach (var bed in this.bed)
                     {
-                        if (bed.ID == allottee.ID)
-                        {
-                            this.bed[i].Status = "Available";
-                        }
+                        if (bed != null)
+                            if (bed.ID == allottee.ID)
+                            {
+                                this.bed[i].Status = "Available";
+                            }
                     }
                     for (int j = i; j < NoOfAllottee; j++)
                     {
