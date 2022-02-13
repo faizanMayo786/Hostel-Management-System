@@ -173,8 +173,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             // 
             // cmbRoomID
             // 
-            this.cmbRoomID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbRoomID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbRoomID.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRoomID.FormattingEnabled = true;
@@ -207,8 +207,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             // 
             // cmbBedID
             // 
-            this.cmbBedID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmbBedID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbBedID.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBedID.FormattingEnabled = true;
@@ -217,7 +217,6 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.cmbBedID.Size = new System.Drawing.Size(247, 29);
             this.cmbBedID.TabIndex = 34;
             this.cmbBedID.Text = "Choose Bed ID...";
-            this.cmbBedID.SelectedIndexChanged += new System.EventHandler(this.cmbRoomID_SelectedIndexChanged);
             // 
             // txtDOB
             // 

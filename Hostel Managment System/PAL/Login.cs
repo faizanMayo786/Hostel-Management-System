@@ -31,7 +31,7 @@ namespace Hostel_Managment_System.PAL
                 txtEmail.Text,
                 txtPassword.Text
                 );
-            if (BAL.Login.VerifyAdmin.Authentication(admin))
+            if (BAL.Admin.VerifyAdmin.Authentication(admin))
             {
                 btnLogin.Tag = "Login";
                 MessageBox.Show("Login Successful!");

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace Hostel_Managment_System.BAL.Login
+namespace Hostel_Managment_System.BAL.Admin
 {
     class VerifyAdmin
     {

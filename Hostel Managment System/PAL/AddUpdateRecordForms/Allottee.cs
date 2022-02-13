@@ -43,6 +43,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
 
                     );
                     DataSource.Data.bed[cmbBedID.SelectedIndex].AllotteID = allotte.ID;
+                    DataSource.Data.bed[cmbBedID.SelectedIndex].Status = "Allotted";
                     DataSource.CRUD.UpdateRecord.Bed.UpdateBedRecord(DataSource.Data.bed[cmbBedID.SelectedIndex]);
                     DataSource.Data.room[cmbRoomID.SelectedIndex].UpdateBed(DataSource.Data.bed[cmbBedID.SelectedIndex]);
                     if (heading.Contains("Add"))
@@ -100,7 +101,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             }
             cmbRoomID.DataSource = room;
             cmbRoomID.Text = "Choose Room ID...";
-            cmbBedID.Text = "Choose Bed ID...";
+
 
             if (heading.Contains("Add"))
             {
@@ -126,6 +127,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                 txtAddress.Text = allottee1.Address;
             }
 
+
         }
 
         private void cmbRoomID_SelectedIndexChanged(object sender, EventArgs e)
@@ -145,6 +147,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                     bed.Add(item.ID);
             }
             cmbBedID.DataSource = bed;
+
         }
     }
 }

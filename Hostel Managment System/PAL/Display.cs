@@ -32,18 +32,22 @@ namespace Hostel_Managment_System.PAL
             switch (type)
             {
                 case 0:
+                    txtShow.Text = "Allottee Record";
                     grdDisplay.DataSource = DataSource.Data.allotte;
                     break;
 
                 case 1:
+                    txtShow.Text = "Payment Record";
                     grdDisplay.DataSource = DataSource.Data.payment;
                     break;
 
                 case 2:
+                    txtShow.Text = "Room Record";
                     grdDisplay.DataSource = DataSource.Data.room;
                     break;
 
                 case 3:
+                    txtShow.Text = "Bed Record";
                     grdDisplay.DataSource = DataSource.Data.bed;
                     break;
 

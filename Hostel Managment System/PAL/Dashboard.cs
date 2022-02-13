@@ -35,30 +35,30 @@ namespace Hostel_Managment_System.PAL
 
         private void pbxUpdate_Click(object sender, EventArgs e)
         {
-            Add_Record add = new Add_Record("Update");
+            Add_Record update = new Add_Record("Update");
             this.Hide();
-            add.Show();
+            update.Show();
         }
 
         private void pbxDelete_Click(object sender, EventArgs e)
         {
-            DeleteRecord add = new DeleteRecord();
+            DeleteRecord delete = new DeleteRecord();
             this.Hide();
-            add.Show();
+            delete.Show();
         }
 
         private void pbxSearch_Click(object sender, EventArgs e)
         {
-            SearchRecord add = new SearchRecord();
+            SearchRecord search = new SearchRecord();
             this.Hide();
-            add.Show();
+            search.Show();
         }
 
         private void pbxDisplay_Click(object sender, EventArgs e)
         {
-            DisplayRecord add = new DisplayRecord();
+            DisplayRecord display = new DisplayRecord();
             this.Hide();
-            add.Show();
+            display.Show();
         }
 
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)

@@ -104,6 +104,7 @@ namespace Hostel_Managment_System.PAL
                                 this.Close();
                                 break;
                             case 1:
+
                                 DataSource.Data.payment.RemoveAt(cmbID.SelectedIndex);
                                 DataSource.CRUD.DeleteRecord.Payment.DeletePaymentRecord(cmbID.SelectedItem.ToString());
                                 MessageBox.Show("Record Deleted");
