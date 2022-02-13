@@ -49,9 +49,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
         {
             if (txtID.Text.Trim() != "")
             {
-                PaymentModel payment = new PaymentModel(
-                    txtID.Text,
-                    dtpDate.Text.ToString()
+                PaymentModel payment = new PaymentModel(txtID.Text, dtpDate.Text.ToString(), cmbAllotteID.SelectedItem.ToString()
                 );
                 if (heading.Contains("Add"))
                 {

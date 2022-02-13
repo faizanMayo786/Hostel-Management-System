@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Hostel_Managment_System.BAL.Login
 {
     class VerifyAdmin
@@ -13,7 +14,6 @@ namespace Hostel_Managment_System.BAL.Login
         static public bool Authentication(AdminModel admin)
         {
             DataSet dataSet = DataSource.Login.Login.GetLogin();
-
             if (
                  admin.Username.Equals(dataSet.Tables[0].Rows[0]["username"].ToString()) &&
                  admin.Password.Equals(dataSet.Tables[0].Rows[0]["password"].ToString())

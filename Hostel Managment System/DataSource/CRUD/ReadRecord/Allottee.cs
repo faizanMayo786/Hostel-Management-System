@@ -44,7 +44,6 @@ namespace Hostel_Managment_System.DataSource.CRUD.ReadRecord
                         if (allot.roomId == room.ID)
                         {
                             room.AllottRoom(allot);
-
                         }
                     }
                 }

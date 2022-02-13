@@ -64,6 +64,7 @@ namespace Hostel_Managment_System.PAL
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+            
         }
 
         private void Dashboard_Load(object sender, EventArgs e)

@@ -37,6 +37,8 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.cmbAllotteID = new System.Windows.Forms.ComboBox();
             this.lblID = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -53,7 +55,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(242, 175);
+            this.txtID.Location = new System.Drawing.Point(242, 157);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(268, 29);
             this.txtID.TabIndex = 1;
@@ -111,11 +113,29 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(96, 178);
+            this.lblID.Location = new System.Drawing.Point(96, 163);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(31, 23);
             this.lblID.TabIndex = 22;
             this.lblID.Text = "ID";
+            // 
+            // lblAmount
+            // 
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.Location = new System.Drawing.Point(96, 198);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(78, 23);
+            this.lblAmount.TabIndex = 22;
+            this.lblAmount.Text = "Amount";
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount.Location = new System.Drawing.Point(242, 195);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(268, 29);
+            this.txtAmount.TabIndex = 1;
             // 
             // Payment
             // 
@@ -125,7 +145,9 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.Controls.Add(this.cmbAllotteID);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.txtID);
+            this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.label2);
@@ -150,5 +172,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.ComboBox cmbAllotteID;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblAmount;
+        private System.Windows.Forms.TextBox txtAmount;
     }
 }
