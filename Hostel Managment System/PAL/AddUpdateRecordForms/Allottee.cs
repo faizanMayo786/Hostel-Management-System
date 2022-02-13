@@ -99,12 +99,9 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
                 room.Add(item.ID);
             }
             cmbRoomID.DataSource = room;
-            List<string> bed = new List<string>();
-            foreach (var item in DataSource.Data.bed)
-            {
-                bed.Add(item.ID);
-            }
-            cmbBedID.DataSource = bed;
+            cmbRoomID.Text = "Choose Room ID...";
+            cmbBedID.Text = "Choose Bed ID...";
+
             if (heading.Contains("Add"))
             {
 
@@ -141,7 +138,13 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             txtName.Enabled = true;
             cmbBedID.Enabled = true;
             txtAddress.Enabled = true;
-
+            List<string> bed = new List<string>();
+            foreach (var item in DataSource.Data.bed)
+            {
+                if (cmbRoomID.SelectedItem.ToString() == item.RoomId)
+                    bed.Add(item.ID);
+            }
+            cmbBedID.DataSource = bed;
         }
     }
 }

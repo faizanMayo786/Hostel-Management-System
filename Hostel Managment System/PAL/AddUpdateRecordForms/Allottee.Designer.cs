@@ -39,7 +39,6 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtCNIC = new System.Windows.Forms.TextBox();
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
-            this.txtDOB = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -47,6 +46,7 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbBedID = new System.Windows.Forms.ComboBox();
+            this.txtDOB = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblText
@@ -142,14 +142,6 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.txtPhoneNo.Size = new System.Drawing.Size(247, 29);
             this.txtPhoneNo.TabIndex = 4;
             // 
-            // txtDOB
-            // 
-            this.txtDOB.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDOB.Location = new System.Drawing.Point(242, 264);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(247, 29);
-            this.txtDOB.TabIndex = 3;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -227,16 +219,25 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
             this.cmbBedID.Text = "Choose Bed ID...";
             this.cmbBedID.SelectedIndexChanged += new System.EventHandler(this.cmbRoomID_SelectedIndexChanged);
             // 
+            // txtDOB
+            // 
+            this.txtDOB.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtDOB.Location = new System.Drawing.Point(242, 263);
+            this.txtDOB.Name = "txtDOB";
+            this.txtDOB.Size = new System.Drawing.Size(247, 29);
+            this.txtDOB.TabIndex = 36;
+            // 
             // Allottee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 503);
+            this.Controls.Add(this.txtDOB);
             this.Controls.Add(this.cmbBedID);
             this.Controls.Add(this.cmbRoomID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.txtDOB);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtPhoneNo);
             this.Controls.Add(this.txtCNIC);
@@ -272,7 +273,6 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtCNIC;
         private System.Windows.Forms.TextBox txtPhoneNo;
-        private System.Windows.Forms.TextBox txtDOB;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Button btnSubmit;
@@ -280,5 +280,6 @@ namespace Hostel_Managment_System.PAL.AddRecordForms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbBedID;
+        private System.Windows.Forms.DateTimePicker txtDOB;
     }
 }

@@ -11,7 +11,7 @@ namespace Hostel_Managment_System.DataSource.CRUD.DeleteRecord
     {
         public static void DeleteBedRecord(string id)
         {
-            string qry = $"DELETE FROM Bed WHERE id = {id}";
+            string qry = $"DELETE FROM Bed WHERE id = '{id}'";
             SqlConnection connection = DataSource.Connection.Connection.GetConnection();
             SqlCommand command = new SqlCommand(qry, connection);
             command.CommandType = System.Data.CommandType.Text;
